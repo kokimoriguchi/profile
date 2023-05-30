@@ -7,8 +7,6 @@ import {
   useSpringRef,
 } from "@react-spring/web";
 
-import styles from "./styles.module.css";
-
 const COORDS = [
   [10, 30],
   [10, 40],
@@ -75,6 +73,10 @@ const COORDS = [
   [270, 50],
   [270, 60],
   [270, 70], //ここまででM
+  [290, 30],
+  [290, 40],
+  [290, 50],
+  [290, 70], //ここまでで!
 ];
 
 const STROKE_WIDTH = 0.5;
@@ -84,7 +86,7 @@ const OFFSET = STROKE_WIDTH / 2;
 const MAX_WIDTH = 300 + OFFSET * 2;
 const MAX_HEIGHT = 100 + OFFSET * 2;
 
-export default function App() {
+export default function TopVideo() {
   const gridApi = useSpringRef();
 
   const gridSprings = useTrail(50, {
@@ -119,8 +121,8 @@ export default function App() {
   useChain([gridApi, boxApi], [0, 1], 1500);
 
   return (
-    <div className={styles["background-container"]}>
-      <div className={styles.container}>
+    <div className="max-w-full max-h-full bg-black text-white flex justify-center items-center">
+      <div className="max-w-800 m-auto w-1/2">
         <svg viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
           <g>
             {gridSprings.map(({ x2 }, index) => (
