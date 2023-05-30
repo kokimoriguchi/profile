@@ -6,6 +6,34 @@ import "swiper/css/pagination";
 import "./slide-style.css";
 
 const Slide = () => {
+  const slides = [
+    {
+      imgSrc: "/images/station-g8d9470f30_640.jpg",
+      altText: "シフト管理アプリ",
+      content: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    },
+    {
+      imgSrc: "/images/sail-g71884137e_640.jpg",
+      altText: "DEMO商品管理システム",
+      content: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    },
+    {
+      imgSrc: "/images/road-g487d9f082_1280.jpg",
+      altText: "Todoアプリ",
+      content: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    },
+    {
+      imgSrc: "/images/bridge-g065b575da_640.jpg",
+      altText: "??????????",
+      content: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    },
+    {
+      imgSrc: "/images/bird-g6d3e981be_640.jpg",
+      altText: "??????????",
+      content: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    },
+  ];
+
   return (
     <div className="h-auto relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-lg md:py-10 xl:py-28">
       <div className="h-max w-full text-center">
@@ -28,111 +56,14 @@ const Slide = () => {
           modules={[Navigation, Pagination, Autoplay]}
           className="h-max"
         >
-          <SwiperSlide>
-            <div className="text-center">
-              <img src="" alt="シフト管理アプリ" />
-              <p>
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="text-center">
-              <img src="" alt="DEMO ECサイト" />
-              <p>
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="text-center">
-              <img src="" alt="ToDoApp" />
-              <p>
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="text-center">
-              <img src="" alt="etc" />
-              <p>
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="text-center">
-              <img src="" alt="etc" />
-              <p>
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-                aaaaaaaaaaaaaaaaaaaaaaaaaaa
-                <br />
-              </p>
-            </div>
-          </SwiperSlide>
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div className="text-center">
+                <img src={slide.imgSrc} alt={slide.altText} />
+                <p>{slide.content}</p>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
