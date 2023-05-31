@@ -121,51 +121,54 @@ export default function TopVideo() {
   useChain([gridApi, boxApi], [0, 1], 1500);
 
   return (
-    <div className="max-w-full max-h-full bg-black text-white flex justify-center items-center">
-      <div className="max-w-800 m-auto w-1/2">
-        <svg viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
-          <g>
-            {gridSprings.map(({ x2 }, index) => (
-              <animated.line
-                x1={0}
-                y1={index * 10 + OFFSET}
-                x2={x2}
-                y2={index * 10 + OFFSET}
+    <>
+      <div className="max-w-full max-h-full bg-gray-800 text-white flex justify-center items-center">
+        <div className="max-w-800 m-auto w-1/2">
+          <svg viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
+            <g>
+              {gridSprings.map(({ x2 }, index) => (
+                <animated.line
+                  x1={0}
+                  y1={index * 10 + OFFSET}
+                  x2={x2}
+                  y2={index * 10 + OFFSET}
+                  key={index}
+                  strokeWidth={STROKE_WIDTH}
+                  stroke="currentColor"
+                />
+              ))}
+              {gridSprings.map(({ y2 }, index) => (
+                <animated.line
+                  x1={index * 10 + OFFSET}
+                  y1={0}
+                  x2={index * 10 + OFFSET}
+                  y2={y2}
+                  key={index}
+                  strokeWidth={STROKE_WIDTH}
+                  stroke="currentColor"
+                />
+              ))}
+            </g>
+            {boxSprings.map(({ scale }, index) => (
+              <animated.rect
                 key={index}
-                strokeWidth={STROKE_WIDTH}
-                stroke="currentColor"
+                width={10}
+                height={10}
+                fill="currentColor"
+                style={{
+                  transformOrigin: `${5 + OFFSET * 2}px ${5 + OFFSET * 2}px`,
+                  transform: `translate(${COORDS[index][0] + OFFSET}px, ${
+                    COORDS[index][1] + OFFSET
+                  }px)`,
+                  scale,
+                }}
               />
             ))}
-            {gridSprings.map(({ y2 }, index) => (
-              <animated.line
-                x1={index * 10 + OFFSET}
-                y1={0}
-                x2={index * 10 + OFFSET}
-                y2={y2}
-                key={index}
-                strokeWidth={STROKE_WIDTH}
-                stroke="currentColor"
-              />
-            ))}
-          </g>
-          {boxSprings.map(({ scale }, index) => (
-            <animated.rect
-              key={index}
-              width={10}
-              height={10}
-              fill="currentColor"
-              style={{
-                transformOrigin: `${5 + OFFSET * 2}px ${5 + OFFSET * 2}px`,
-                transform: `translate(${COORDS[index][0] + OFFSET}px, ${
-                  COORDS[index][1] + OFFSET
-                }px)`,
-                scale,
-              }}
-            />
-          ))}
-        </svg>
+          </svg>
+        </div>
       </div>
-    </div>
+      <div className="bg-gray-800 h-5"></div>
+    </>
   );
 }
 

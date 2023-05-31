@@ -36,7 +36,7 @@ const ProfileDetail = () => {
           <div className="w-full text-center sm:text-center lg:py-4 xl:py-12 mx-auto items-center">
             <div className="items-center w-full md:mb-16 lg:h-auto ">
               <img
-                src="/images/537C3E1C-319B-4478-A4CF-1312B5AABEAE_1_201_a.jpeg"
+                src="/images/cat-g11fd1a3e2_640.jpg"
                 alt="MyPicture"
                 className="w-3/5 h-auto object-cover object-center mx-auto pt-8 rounded-full"
               />
