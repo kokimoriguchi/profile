@@ -30,16 +30,16 @@ const Home = () => {
         </div>
 
         <div className="mb-12 flex w-full md:mb-16 lg:w-2/3">
-          <div className="relative top-12 left-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:top-16 md:left-16 lg:ml-0">
+          <div className="h-3/4 relative top-12 left-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:top-16 md:left-16 lg:ml-0">
             <img
-              src="/images/5AAAEDC6-9A14-4A14-97EE-11BF81BE2FA4_1_105_c.jpeg"
+              src="/images/camera-g3583b09a1_640.jpg"
               alt="bike"
               className="h-full w-full object-cover object-center"
             />
           </div>
-          <div className="overflow-hidden rounded-lg bg-gray-100 shadow-lg">
+          <div className="h-3/4 overflow-hidden rounded-lg bg-gray-100 shadow-lg">
             <img
-              src="/images/528C3401-49E1-4E22-99DF-4A9E70E726A8_1_105_c.jpeg"
+              src="/images/mountain-g0c16fbfe2_1280.jpg"
               alt="myImage"
               className="h-full w-full object-cover object-center"
             />
