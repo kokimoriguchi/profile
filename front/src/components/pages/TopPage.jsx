@@ -3,7 +3,6 @@ import Home from "./Home";
 import Portfolio from "./Portfolio";
 import ProfileDetail from "./ProfileDetail";
 import TopVideo from "./TopVideo";
-import StudyGrid from "./StudyGrid";
 import Skill from "./Skill";
 
 function TopPage() {
@@ -15,7 +14,6 @@ function TopPage() {
           <Home />
           <ProfileDetail />
           <Skill />
-          <StudyGrid />
           <Portfolio />
           <Contact />
         </div>

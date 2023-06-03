@@ -1,32 +1,32 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper";
+import SwiperCore, { Autoplay, Pagination } from "swiper";
+import { useState } from "react";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
+import OpenModal from "./Modal";
+import slides from "../Data/SlideData";
+
+SwiperCore.use([Autoplay, Pagination]);
 
 const Slide = () => {
-  const slides = [
-    {
-      imgSrc: "/images/station-g8d9470f30_640.jpg",
-      altText: "シフト管理アプリ",
-    },
-    {
-      imgSrc: "/images/sail-g71884137e_640.jpg",
-      altText: "DEMO商品管理システム",
-    },
-    {
-      imgSrc: "/images/road-g487d9f082_1280.jpg",
-      altText: "Todoアプリ",
-    },
-    {
-      imgSrc: "/images/bridge-g065b575da_640.jpg",
-      altText: "??????????",
-    },
-    {
-      imgSrc: "/images/road-g487d9f082_1280.jpg",
-      altText: "??????????",
-    },
-  ];
+  const [modalState, setModalState] = useState({});
+  const closeModal = (index) => {
+    setModalState((prev) => ({ ...prev, [index]: false }));
+  };
+
+  // function Carousel({ slides }) {
+  //   const swiperRef = useRef(null);
+
+  //   useEffect(() => {
+  //     const isAnyModalOpen = Object.values(modalState).some((value) => value);
+
+  //     if (isAnyModalOpen && swiperRef.current) {
+  //       swiperRef.current.autoplay.stop();
+  //     } else if (!isAnyModalOpen && swiperRef.current) {
+  //       swiperRef.current.autoplay.start();
+  //     }
+  //   }, [modalState]);
+  // }
 
   return (
     <div className="h-auto relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-lg md:py-10 xl:py-28">
@@ -38,7 +38,7 @@ const Slide = () => {
             clickable: true,
           }}
           autoplay={{
-            delay: 2500,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -51,9 +51,23 @@ const Slide = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="text-center">
+              <div
+                className="text-center"
+                onClick={() =>
+                  setModalState((prev) => ({ ...prev, [index]: true }))
+                }
+              >
                 <img src={slide.imgSrc} alt={slide.altText} />
                 <p>{slide.content}</p>
+                {modalState[index] ? (
+                  <OpenModal
+                    modalState={modalState[index]}
+                    slide={slide}
+                    closeModal={() => closeModal(index)}
+                  />
+                ) : (
+                  <div className="pt-10"></div>
+                )}
               </div>
             </SwiperSlide>
           ))}

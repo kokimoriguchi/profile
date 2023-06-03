@@ -49,17 +49,20 @@ const Skill = () => {
   };
 
   return (
-    <div id="skills">
+    <div id="skills" className="pb-20">
       <div className="text-black-800 text-4xl font-bold sm:text-5xl md:text-6xl text-center pt-4 pb-4">
         <h2>Skills</h2>
       </div>
-      <div className="sm:flex sm:flex-row flex-col justify-center ">
+      <div className="sm:flex sm:flex-row flex-col sm:justify-center justify-center">
         {state.requestState === requestStates.loading && (
           <p className="description">取得中...</p>
         )}
         {state.requestState === requestStates.success &&
           state.languageList.map((item, index) => (
-            <div key={index} className="justify-center">
+            <div
+              key={index}
+              className="flex flex-col sm:justify-center justify-center items-center"
+            >
               <p className="description text-center">
                 <strong>{item.language}</strong>
               </p>
@@ -67,6 +70,7 @@ const Skill = () => {
                 animate
                 progress={converseCountToPercentage(item.count)}
                 size="200px"
+                className="flex justify-center"
               />
             </div>
           ))}
