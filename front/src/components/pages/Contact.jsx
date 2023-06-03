@@ -1,16 +1,16 @@
 const Contact = () => {
   return (
-    <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-      <div class="mb-10 md:mb-16">
-        <h2 class="text-black-800 text-4xl font-bold mb-4 text-center text-gray-800 md:mb-6 lg:text-3xl pt-6">
+    <div id="Contact">
+      <div className="mb-10 md:mb-16">
+        <h1 className="text-black-800 text-4xl font-bold sm:text-5xl md:text-6xl text-center mr-auto pt-4 pb-4">
           Contact
-        </h2>
+        </h1>
 
         <p className="mx-auto m-auto max-w-screen-md text-center text-gray-500 md:text-lg">
           if you ask me
         </p>
       </div>
-      <form class="mx-auto max-w-screen-md gap-4">
+      <form className="mx-auto max-w-screen-md gap-4">
         <div className="">
           <p className="mb-2 inline-block text-sm text-gray-800 sm:text-base">
             Name

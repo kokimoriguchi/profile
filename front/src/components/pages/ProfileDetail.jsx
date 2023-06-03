@@ -1,9 +1,14 @@
 const ProfileDetail = () => {
   return (
-    //<h1>Profile</h1>
-    <div className="bg-white sm:pb-8 lg:pb-12 ">
-      <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div className="h-auto flex flex-col lg:flex-row">
+    <div className="bg-white sm:pb-8 lg:pb-12 sm:mx-16 mx-0 mb-20">
+      <div className="mx-auto max-w-screen-2xl">
+        <h1 className="text-black-800 text-4xl font-bold sm:text-5xl md:text-6xl text-center mr-auto pt-4 pb-4 ">
+          Profile
+        </h1>
+        <div
+          id="ProfileDetail"
+          className="h-auto flex flex-col lg:flex-row rounded-lg bg-gray-100 shadow-lg overflow-hidden"
+        >
           <div className="h-max w-full text-center lg:py-4   xl:py-12">
             <p className="font-semibold text-indigo-500 pt-8 md:mb-6 md:text-lg xl:text-xl">
               MyProfile
