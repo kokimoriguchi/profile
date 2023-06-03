@@ -3,6 +3,8 @@ import Home from "./Home";
 import Portfolio from "./Portfolio";
 import ProfileDetail from "./ProfileDetail";
 import TopVideo from "./TopVideo";
+import StudyGrid from "./StudyGrid";
+import Skill from "./Skill";
 
 function TopPage() {
   return (
@@ -12,6 +14,8 @@ function TopPage() {
         <div className="h-auto md:py-10 xl:py-28">
           <Home />
           <ProfileDetail />
+          <Skill />
+          <StudyGrid />
           <Portfolio />
           <Contact />
         </div>
