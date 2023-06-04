@@ -16,7 +16,7 @@ const Contact = () => {
             Name
           </p>
           <input
-            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring hover:opacity-75"
             type="text"
             name="your-name"
           />
@@ -26,7 +26,7 @@ const Contact = () => {
             Email
           </p>
           <input
-            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring hover:opacity-75"
             type="email"
             name="your-email"
           />
@@ -36,7 +36,7 @@ const Contact = () => {
             Message
           </p>
           <textarea
-            className="h-48 w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+            className="h-48 w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring hover:opacity-75"
             type="text"
             name="message"
           ></textarea>
