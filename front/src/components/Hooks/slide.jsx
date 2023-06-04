@@ -14,20 +14,6 @@ const Slide = () => {
     setModalState((prev) => ({ ...prev, [index]: false }));
   };
 
-  // function Carousel({ slides }) {
-  //   const swiperRef = useRef(null);
-
-  //   useEffect(() => {
-  //     const isAnyModalOpen = Object.values(modalState).some((value) => value);
-
-  //     if (isAnyModalOpen && swiperRef.current) {
-  //       swiperRef.current.autoplay.stop();
-  //     } else if (!isAnyModalOpen && swiperRef.current) {
-  //       swiperRef.current.autoplay.start();
-  //     }
-  //   }, [modalState]);
-  // }
-
   return (
     <div className="h-auto relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-lg md:py-10 xl:py-28">
       <div className="h-4/5 w-full text-center">
@@ -38,7 +24,7 @@ const Slide = () => {
             clickable: true,
           }}
           autoplay={{
-            delay: 4000,
+            delay: 6000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -52,13 +38,20 @@ const Slide = () => {
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <p className="text-xl pb-5 font-semibold">{slide.altText}</p>
+              <p className="text-xs py-8 w-96 opacity-70">
+                {slide.detailContent}
+              </p>
               <div
                 className="text-center"
                 onClick={() =>
                   setModalState((prev) => ({ ...prev, [index]: true }))
                 }
               >
-                <img src={slide.imgSrc} alt={slide.altText} />
+                <img
+                  src={slide.imgSrc}
+                  alt={slide.altText}
+                  className="w-96 h-48"
+                />
                 <p>{slide.content}</p>
                 {modalState[index] ? (
                   <OpenModal

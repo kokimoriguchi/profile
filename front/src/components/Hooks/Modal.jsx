@@ -4,15 +4,15 @@ const OpenModal = ({ slide, closeModal }) => {
   const modalContents = (slide) => {
     switch (slide.altText) {
       case "シフト管理アプリ":
-        return "/images/528C3401-49E1-4E22-99DF-4A9E70E726A8_1_105_c.jpeg";
+        return "/images/スクリーンショット 2023-06-04 15.21.25.png";
       case "DEMO商品管理システム":
-        return "/images/528C3401-49E1-4E22-99DF-4A9E70E726A8_1_105_c.jpeg";
+        return "/images/スクリーンショット 2023-06-04 15.05.25.png";
       case "iSara模写":
         return "/images/localhost_3000_.png";
       case "Todoアプリ":
-        return "/images/bird-g6d3e981be_640.jpg";
+        return "/images/スクリーンショット 2023-06-04 15.26.46.png";
       case "ProGate模写":
-        return "/images/mountain-g0c16fbfe2_1280.jpg";
+        return "/images/_Users_kokimoriguchi_html_book_progate_index.html.png";
       default:
         return "ERROR";
     }

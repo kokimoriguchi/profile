@@ -11,7 +11,7 @@ const Home = () => {
         <h2 className="text-black-800 mb-8 text-2xl font-bold sm:text-2xl md:mb-12 md:text-2xl">
           DETAIL
         </h2>
-        <p className="max-w-md leading-relaxed text-gray-500 xl:text-lg">
+        <p className="sm:max-w-md leading-relaxed text-gray-500 xl:text-lg w-auto">
           aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
           <br />
           aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
