@@ -12,7 +12,7 @@ const slides = [
     altText: "Todoアプリ",
   },
   {
-    imgSrc: "/images/bridge-g065b575da_640.jpg",
+    imgSrc: "/images/スクリーンショット 2023-06-04 13.18.09.png",
     altText: "iSara模写",
   },
   {

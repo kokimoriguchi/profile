@@ -51,6 +51,7 @@ const Slide = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
+              <p className="text-xl pb-5 font-semibold">{slide.altText}</p>
               <div
                 className="text-center"
                 onClick={() =>
@@ -64,6 +65,7 @@ const Slide = () => {
                     modalState={modalState[index]}
                     slide={slide}
                     closeModal={() => closeModal(index)}
+                    className="fixed top-0 left-0 w-screen h-screen bg-gray-400 flex items-center justify-center opacity-60"
                   />
                 ) : (
                   <div className="pt-10"></div>
