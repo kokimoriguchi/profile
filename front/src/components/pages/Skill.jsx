@@ -4,6 +4,7 @@ import { skillReducer } from "../reducer/skillReducer";
 import { initialState } from "../reducer/skillReducer";
 import { actionTypes } from "../reducer/skillReducer";
 import { requestStates } from "../reducer/constants";
+import { FadeIn } from "../Hooks/FadeIn";
 import axios from "axios";
 import Circle from "react-circle";
 
@@ -53,31 +54,33 @@ const Skill = () => {
       <div className="text-black-800 text-4xl font-bold sm:text-5xl md:text-6xl text-center pt-4 pb-4">
         <h2>Skills</h2>
       </div>
-      <div className="sm:flex sm:flex-row flex-col sm:justify-center justify-center">
-        {state.requestState === requestStates.loading && (
-          <p className="description">取得中...</p>
-        )}
-        {state.requestState === requestStates.success &&
-          state.languageList.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col sm:justify-center justify-center items-center"
-            >
-              <p className="description text-center">
-                <strong>{item.language}</strong>
-              </p>
-              <Circle
-                animate
-                progress={converseCountToPercentage(item.count)}
-                size="200px"
-                className="flex justify-center"
-              />
-            </div>
-          ))}
-        {state.requestState === requestStates.error && (
-          <p className="description">エラーが発生しました</p>
-        )}
-      </div>
+      <FadeIn>
+        <div className="sm:flex sm:flex-row flex-col sm:justify-center justify-center">
+          {state.requestState === requestStates.loading && (
+            <p className="description">取得中...</p>
+          )}
+          {state.requestState === requestStates.success &&
+            state.languageList.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col sm:justify-center justify-center items-center"
+              >
+                <p className="description text-center">
+                  <strong>{item.language}</strong>
+                </p>
+                <Circle
+                  animate
+                  progress={converseCountToPercentage(item.count)}
+                  size="200px"
+                  className="flex justify-center"
+                />
+              </div>
+            ))}
+          {state.requestState === requestStates.error && (
+            <p className="description">エラーが発生しました</p>
+          )}
+        </div>
+      </FadeIn>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import { FadeIn } from "../Hooks/FadeIn";
+
 const Home = () => {
   return (
     <div
@@ -32,20 +34,24 @@ const Home = () => {
       </div>
 
       <div className="mb-12 flex w-full md:mb-16 lg:w-2/3">
-        <div className="h-3/4 relative top-12 left-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:top-16 md:left-16 lg:ml-0">
-          <img
-            src="/images/camera-g3583b09a1_640.jpg"
-            alt="bike"
-            className="h-full w-full object-cover object-center"
-          />
-        </div>
-        <div className="h-3/4 overflow-hidden rounded-lg bg-gray-100 shadow-lg">
-          <img
-            src="/images/mountain-g0c16fbfe2_1280.jpg"
-            alt="myImage"
-            className="h-full w-full object-cover object-center"
-          />
-        </div>
+        <FadeIn>
+          <div className="h-3/4 relative top-12 left-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:top-16 md:left-16 lg:ml-0">
+            <img
+              src="/images/camera-g3583b09a1_640.jpg"
+              alt="bike"
+              className="h-full w-full object-cover object-center"
+            />
+          </div>
+        </FadeIn>
+        <FadeIn>
+          <div className="h-3/4 overflow-hidden rounded-lg bg-gray-100 shadow-lg">
+            <img
+              src="/images/mountain-g0c16fbfe2_1280.jpg"
+              alt="myImage"
+              className="h-full w-full object-cover object-center"
+            />
+          </div>
+        </FadeIn>
       </div>
     </div>
   );

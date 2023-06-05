@@ -1,4 +1,5 @@
 import Slide from "../Hooks/slide";
+import { FadeIn } from "../Hooks/FadeIn";
 
 const Portfolio = () => {
   return (
@@ -7,7 +8,9 @@ const Portfolio = () => {
         Portfolio
       </h1>
       <hr />
-      <Slide />
+      <FadeIn>
+        <Slide />
+      </FadeIn>
     </div>
   );
 };

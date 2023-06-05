@@ -3,7 +3,7 @@ import HeaderMenu from "../Hooks/HeaderMenu";
 
 const Header = () => {
   return (
-    <div>
+    <div className="sticky top-0 z-50">
       <header>
         <div className="flex bg-gray-800 text-white sticky top-0 z-50 max-w-screen-2xl">
           <nav className="flex items-center justify-between container mx-auto py-4">
