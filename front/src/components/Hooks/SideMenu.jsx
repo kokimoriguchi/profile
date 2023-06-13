@@ -28,21 +28,21 @@ const SideMenu = () => {
         className="flex-initial md:hidden z-10 space-y-2 max-sm:p-4 "
       >
         {openMenu ? (
-          <div className="relative w-6 h-px ">
-            <div className="absolute w-6 h-px bg-white transform rotate-45 top-1/2"></div>
-            <div className="absolute w-6 h-px bg-white transform -rotate-45 top-1/2"></div>
+          <div className="relative w-6 h-px z-20">
+            <div className="absolute w-6 h-px bg-black transform transition-all duration-500 rotate-45 top-1/2"></div>
+            <div className="absolute w-6 h-px bg-black transform transition-all duration-500 -rotate-45 top-1/2"></div>
           </div>
         ) : (
           <div>
-            <div className="w-6 h-px bg-white mb-2"></div>
-            <div className="w-6 h-px bg-white mb-2"></div>
-            <div className="w-6 h-px bg-white"></div>
+            <div className="w-6 h-0.5 bg-black transition-all duration-500 mb-2"></div>
+            <div className="w-6 h-0.5 bg-black transition-all duration-500 mb-2"></div>
+            <div className="w-6 h-0.5 bg-black transition-all duration-500"></div>
           </div>
         )}
 
         <div>
           <div
-            className={`fixed right-0 top-0 h-full w-64 transition-transform duration-200 ease-in-out transform ${
+            className={`fixed right-0 top-0 h-full w-64 transition-transform duration-500 ease-in-out transform ${
               sideOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >

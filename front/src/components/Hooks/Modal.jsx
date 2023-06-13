@@ -4,13 +4,13 @@ const OpenModal = ({ slide, closeModal }) => {
   const modalContents = (slide) => {
     switch (slide.altText) {
       case "シフト管理アプリ":
-        return "/images/スクリーンショット 2023-06-04 15.21.25.png";
+        return "/images/calender_modal.png";
       case "DEMO商品管理システム":
-        return "/images/スクリーンショット 2023-06-04 15.05.25.png";
+        return "/images/stock_practice.png";
       case "iSara模写":
         return "/images/localhost_3000_.png";
       case "Todoアプリ":
-        return "/images/スクリーンショット 2023-06-04 15.26.46.png";
+        return "/images/todo.png";
       case "ProGate模写":
         return "/images/_Users_kokimoriguchi_html_book_progate_index.html.png";
       default:

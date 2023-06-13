@@ -16,7 +16,7 @@ const Slide = () => {
 
   return (
     <div className="h-auto relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-lg md:py-10 xl:py-28">
-      <div className="h-4/5 w-full text-center">
+      <div className="h-2/3 w-full text-center">
         <Swiper
           slidesPerView={1}
           centeredSlides={true}
@@ -24,7 +24,7 @@ const Slide = () => {
             clickable: true,
           }}
           autoplay={{
-            delay: 6000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -36,13 +36,13 @@ const Slide = () => {
           className="h-max"
         >
           {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="px-6">
               <p className="text-xl pb-5 font-semibold">{slide.altText}</p>
-              <p className="text-xs py-8 w-96 opacity-70">
+              <p className="text-xs py-8 w-96 h-20 opacity-70">
                 {slide.detailContent}
               </p>
               <div
-                className="text-center"
+                className="text-center m-auto"
                 onClick={() =>
                   setModalState((prev) => ({ ...prev, [index]: true }))
                 }
@@ -50,7 +50,7 @@ const Slide = () => {
                 <img
                   src={slide.imgSrc}
                   alt={slide.altText}
-                  className="w-96 h-48"
+                  className="border-2 border-black h-80 w-screen"
                 />
                 <p>{slide.content}</p>
                 {modalState[index] ? (

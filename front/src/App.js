@@ -4,7 +4,7 @@ import TopPage from "./components/pages/TopPage";
 
 function App() {
   return (
-    <div className="bg-[/images/white_00083.jpg]">
+    <div className="">
       <div className="">
         <Header />
         <TopPage />

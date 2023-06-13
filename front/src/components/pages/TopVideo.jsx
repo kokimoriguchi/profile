@@ -122,7 +122,7 @@ export default function TopVideo() {
 
   return (
     <>
-      <div className="max-w-full max-h-full bg-gray-800 text-white flex justify-center items-center">
+      <div className="max-w-full max-h-full pt-64 pb-80 bg-big-bg-img animate-bg-pan-left text-white flex justify-center items-center">
         <div className="max-w-800 m-auto w-1/2">
           <svg viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
             <g>
@@ -167,7 +167,6 @@ export default function TopVideo() {
           </svg>
         </div>
       </div>
-      <div className="bg-gray-800 h-5"></div>
     </>
   );
 }

@@ -51,11 +51,11 @@ const Skill = () => {
 
   return (
     <div id="skills" className="pb-20">
-      <div className="text-black-800 text-4xl font-bold sm:text-5xl md:text-6xl text-center pt-4 pb-4">
+      <div className="text-black text-4xl font-bold sm:text-5xl md:text-6xl text-center pt-4 pb-4">
         <h2>Skills</h2>
       </div>
       <FadeIn>
-        <div className="sm:flex sm:flex-row flex-col sm:justify-center justify-center">
+        <div className="sm:flex sm:flex-row flex-col sm:justify-center justify-center text-black">
           {state.requestState === requestStates.loading && (
             <p className="description">取得中...</p>
           )}
@@ -72,7 +72,7 @@ const Skill = () => {
                   animate
                   progress={converseCountToPercentage(item.count)}
                   size="200px"
-                  className="flex justify-center"
+                  className="flex justify-center text-white"
                 />
               </div>
             ))}
