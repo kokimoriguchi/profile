@@ -47,7 +47,7 @@ const ProfileDetail = () => {
                   <img
                     src="/images/537C3E1C-319B-4478-A4CF-1312B5AABEAE_1_201_a.jpeg"
                     alt="MyPicture"
-                    className="w-2/5 h-auto object-cover object-center border-2 border-black mx-auto pt-8 rounded-full"
+                    className="w-2/5 h-auto mx-auto pt-8 rounded-full"
                   />
                 </div>
 
