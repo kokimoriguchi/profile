@@ -24,8 +24,8 @@ const ProfileDetail = () => {
                   About Me
                 </h2>
                 <p className="md:mb-8 md:text-lg max-w-screen-md text-black">
-                  pppppppppppppppppppppppppppppppppppppp
-                  pppppppppppppppppppppppppppppppppppppp
+                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                   pppppppppppppppppppppppppppppppppppppp
                   pppppppppppppppppppppppppppppppppppppp
                   pppppppppppppppppppppppppppppppppppppp
