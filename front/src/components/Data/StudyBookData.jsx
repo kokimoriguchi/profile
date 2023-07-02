@@ -72,6 +72,6 @@ export const StudyBookData = [
   {
     bookImg: "/images/Ruby.png",
     bookAlt: "ruby",
-    bookText: "this is ruby",
+    bookText: "this is aaaaaaa",
   },
 ];
