@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 
-export const FadeIn = ({ children }) => {
+export const FadeIn = ({ children, onAnimationEnd }) => {
   const { ref, inView } = useInView({
     // オプション
     rootMargin: "-50px", // ref要素が現れてから50px過ぎたら
@@ -13,6 +13,7 @@ export const FadeIn = ({ children }) => {
       className={`${
         inView ? "opacity-100" : "opacity-0 translate-y-[50%]"
       } duration-[1s]`}
+      onTransitionEnd={onAnimationEnd}
     >
       {children}
     </div>

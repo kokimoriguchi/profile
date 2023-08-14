@@ -7,6 +7,8 @@ import {
   useSpringRef,
 } from "@react-spring/web";
 
+import { useState, useEffect } from "react";
+
 const COORDS = [
   [10, 30],
   [10, 40],
@@ -83,10 +85,28 @@ const STROKE_WIDTH = 0.5;
 
 const OFFSET = STROKE_WIDTH / 2;
 
-const MAX_WIDTH = 300 + OFFSET * 2;
+const MAX_WIDTH = 310 + OFFSET * 2;
 const MAX_HEIGHT = 100 + OFFSET * 2;
 
 export default function TopVideo() {
+  const [showKoki, setShowKoki] = useState(false);
+  const [showMoriguchi, setShowMoriguchi] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowKoki(true);
+    }, 1000); // 500ms の遅延後に KOKI を表示
+
+    setTimeout(() => {
+      setShowMoriguchi(true);
+    }, 2000); // 合計 1000ms の遅延後に MORIGUCHI'S を表示
+
+    setTimeout(() => {
+      setShowProfile(true);
+    }, 3000); // 合計 1500ms の遅延後に PROFILE を表示
+  }, []);
+
   const gridApi = useSpringRef();
 
   const gridSprings = useTrail(50, {
@@ -121,52 +141,76 @@ export default function TopVideo() {
   useChain([gridApi, boxApi], [0, 1], 1500);
 
   return (
-    <>
-      <div className="max-w-full max-h-full pt-64 pb-80 bg-big-bg-img animate-bg-pan-left text-white flex justify-center items-center">
-        <div className="max-w-800 m-auto w-1/2">
-          <svg viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
-            <g>
-              {gridSprings.map(({ x2 }, index) => (
-                <animated.line
-                  x1={0}
-                  y1={index * 10 + OFFSET}
-                  x2={x2}
-                  y2={index * 10 + OFFSET}
-                  key={index}
-                  strokeWidth={STROKE_WIDTH}
-                  stroke="currentColor"
-                />
-              ))}
-              {gridSprings.map(({ y2 }, index) => (
-                <animated.line
-                  x1={index * 10 + OFFSET}
-                  y1={0}
-                  x2={index * 10 + OFFSET}
-                  y2={y2}
-                  key={index}
-                  strokeWidth={STROKE_WIDTH}
-                  stroke="currentColor"
-                />
-              ))}
-            </g>
-            {boxSprings.map(({ scale }, index) => (
-              <animated.rect
+    <div className="max-w-full max-h-full text-white flex justify-center items-center">
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute -z-10 w-full h-full object-cover"
+      >
+        <source src="/images/19415_640x360.mp4" type="video/mp4" />
+        お使いのブラウザは動画をサポートしていません。
+      </video>
+      <div className="max-w-800  pt-48 m-auto w-1/2">
+        <svg viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
+          <g>
+            {gridSprings.map(({ x2 }, index) => (
+              <animated.line
+                x1={0}
+                y1={index * 10 + OFFSET}
+                x2={x2}
+                y2={index * 10 + OFFSET}
                 key={index}
-                width={10}
-                height={10}
-                fill="currentColor"
-                style={{
-                  transformOrigin: `${5 + OFFSET * 2}px ${5 + OFFSET * 2}px`,
-                  transform: `translate(${COORDS[index][0] + OFFSET}px, ${
-                    COORDS[index][1] + OFFSET
-                  }px)`,
-                  scale,
-                }}
+                strokeWidth={STROKE_WIDTH}
+                stroke="currentColor"
               />
             ))}
-          </svg>
+            {gridSprings.map(({ y2 }, index) => (
+              <animated.line
+                x1={index * 10 + OFFSET}
+                y1={0}
+                x2={index * 10 + OFFSET}
+                y2={y2}
+                key={index}
+                strokeWidth={STROKE_WIDTH}
+                stroke="currentColor"
+              />
+            ))}
+          </g>
+          {boxSprings.map(({ scale }, index) => (
+            <animated.rect
+              key={index}
+              width={10}
+              height={10}
+              fill="currentColor"
+              style={{
+                transformOrigin: `${5 + OFFSET * 2}px ${5 + OFFSET * 2}px`,
+                transform: `translate(${COORDS[index][0] + OFFSET}px, ${
+                  COORDS[index][1] + OFFSET
+                }px)`,
+                scale,
+              }}
+            />
+          ))}
+        </svg>
+        <div className="text-[50px] py-8 font-mono relative right-72">
+          {showKoki ? (
+            <p className="animate-tracking-in-expand">KOKI</p>
+          ) : (
+            <p className="opacity-0">KOKI</p>
+          )}
+          {showMoriguchi ? (
+            <p className="animate-tracking-in-expand">MORIGUCHI'S</p>
+          ) : (
+            <p className=" opacity-0">MORIGUCHI</p>
+          )}
+          {showProfile ? (
+            <p className="animate-tracking-in-expand">PROFILE</p>
+          ) : (
+            <p className=" opacity-0">PROFILE</p>
+          )}
         </div>
       </div>
-    </>
+    </div>
   );
 }

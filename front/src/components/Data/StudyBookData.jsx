@@ -64,14 +64,4 @@ export const StudyBookData = [
     bookAlt: "SQL",
     bookText: "this is SQL",
   },
-  {
-    bookImg: "/images/Rails.png",
-    bookAlt: "rails",
-    bookText: "this is rails",
-  },
-  {
-    bookImg: "/images/Ruby.png",
-    bookAlt: "ruby",
-    bookText: "this is aaaaaaa",
-  },
 ];

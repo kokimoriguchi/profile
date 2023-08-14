@@ -1,17 +1,31 @@
-import Slide from "../Hooks/slide";
+import React from "react";
 import { FadeIn } from "../Hooks/FadeIn";
+import PortfolioData from "../Data/PortfolioData";
 
 const Portfolio = () => {
   return (
-    <div id="Portfolio" className="mb-20 sm:pt-10 pt-20">
-      <h1 className="text-black-800 text-4xl font-bold sm:text-5xl md:text-6xl text-center pt-4 pb-4">
-        Portfolio
-      </h1>
-      <hr />
-      <FadeIn>
-        <Slide />
-      </FadeIn>
-    </div>
+    <FadeIn>
+      <div id="Portfolio">
+        <div>
+          <h1 className="text-black text-4xl font-bold sm:text-5xl md:text-6xl text-center mr-auto pb-4 mb-10 ">
+            PORTFOLIOS
+          </h1>
+        </div>
+        <div className="h-screen grid sm:grid-cols-3 sm:grid-rows-3 grid-cols-3 sm:mb-20 mb-40 gap-x-0.5">
+          {PortfolioData.map((portfolioData, index) => (
+            <div className="h-40" key={index}>
+              <img
+                src={portfolioData.imgSrc}
+                alt={portfolioData.altText}
+                className="m-auto transition-all duration-500"
+              />
+              <p className="">{portfolioData.detailContent}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </FadeIn>
   );
 };
+
 export default Portfolio;

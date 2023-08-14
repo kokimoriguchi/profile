@@ -3,16 +3,29 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "big-bg-img":
-          "url(/Users/kokimoriguchi/my-profile/front/public/images/jeremy-bishop-G9i_plbfDgk-unsplash.jpg)",
+      colors: {
+        customColor: "#000107",
       },
       animation: {
+        "tracking-in-expand":
+          "tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000)   both",
         "bg-pan-left": "bg-pan-left 10s ease infinite",
         "flip-in-hor-bottom":
           "flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
       },
       keyframes: {
+        "tracking-in-expand": {
+          "0%": {
+            "letter-spacing": "-.5em",
+            opacity: "0",
+          },
+          "40%": {
+            opacity: ".6",
+          },
+          to: {
+            opacity: "1",
+          },
+        },
         "bg-pan-left": {
           "0%": {
             "background-position": "100% 50%",

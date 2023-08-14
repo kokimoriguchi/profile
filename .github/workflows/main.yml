@@ -3,7 +3,7 @@ name: Auto git pull in EC2 Instance
 on:
   push:
     branches:
-      - main
+      - production
 
 jobs:
   deploy:

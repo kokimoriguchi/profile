@@ -7,7 +7,9 @@ const Header = () => {
       <header>
         <div className="flex text-black sticky top-0 z-50 max-w-screen-2xl">
           <nav className="flex items-center justify-between container mx-auto py-4">
-            <div className="text-xl font-bold max-sm:p-4">MY PROFILE</div>
+            <div className="text-xl font-bold max-sm:p-4">
+              KOKI MORIGUCHI PROFILE
+            </div>
             <HeaderMenu />
             <SideMenu />
           </nav>
