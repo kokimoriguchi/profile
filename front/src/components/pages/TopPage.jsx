@@ -5,7 +5,11 @@ import ProfileDetail from "./ProfileDetail";
 import TopVideo from "./TopVideo";
 import Skill from "./Skill";
 import LearningBooksSlide from "./LearningBooksSlide";
-import { SectionLineVideo } from "./SectionLine";
+import {
+  SectionLineVideo,
+  SectionLineWhiteToGray,
+  SectionLineGrayToWhite,
+} from "./SectionLine";
 
 function TopPage() {
   return (
@@ -15,7 +19,9 @@ function TopPage() {
       <div className="mx-auto max-w-screen-2xl pb-4 ">
         <div className="h-auto md:py-10 xl:py-28">
           <Home />
+          <SectionLineWhiteToGray />
           <ProfileDetail />
+          <SectionLineGrayToWhite />
           <Portfolio />
           <Skill />
           <LearningBooksSlide />

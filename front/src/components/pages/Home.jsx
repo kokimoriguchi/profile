@@ -24,16 +24,21 @@ const Home = () => {
         id="Home"
         className="sm:mx-16 mx-0 mb-8 flex flex-wrap justify-between"
       >
-        <div className="mb-6 flex w-auto flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pt-48 lg:pb-24">
+        <div className="mb-6 font-mono flex w-auto flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pt-48 lg:pb-24">
           {animationTitle ? (
-            <h1 className="animate-tracking-in-expand text-black-800 mb-4 text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl">
-              WELCOME
-            </h1>
+            <div className="animate-tracking-in-expand">
+              <h1 className="text-indigo-400 text-black-800 mb-4 text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl opacity-50">
+                WELCOME
+              </h1>
+              <h1 className="text-black-800 relative -top-[95px] right-2 text-6xl font-bold ">
+                WELCOME
+              </h1>
+            </div>
           ) : (
             <h1 className="text-4xl mb-4 opacity-0 font-bold">WELCOME</h1>
           )}
           {animationDetail ? (
-            <h2 className="animate-tracking-in-expand text-black-800 mb-8 text-2xl font-bold sm:text-2xl md:mb-12 md:text-2xl">
+            <h2 className="text-indigo-400 animate-tracking-in-expand mb-8 text-2xl font-bold sm:text-2xl md:mb-12 md:text-2xl">
               DETAIL
             </h2>
           ) : (
@@ -42,39 +47,43 @@ const Home = () => {
             </h2>
           )}
           {animationText ? (
-            <p className="animate-tracking-in-expand sm:max-w-md leading-relaxed text-gray-500 xl:text-base w-auto">
-              サイトをご覧いただきありがとうございます。
-              <br />
-              このページでは私、森口皓貴について
-              <br />
-              簡単に自己紹介させていただければと思います。
-              <br />
-              ページ構成として、プロフィール
-              <br />
-              現状のスキルレベル、学習履歴、
-              <br />
-              ポートフォリオの順に掲載しております。
-              <br />
+            <div>
+              <p className="animate-tracking-in-expand sm:max-w-md leading-relaxed text-gray-500 xl:text-base w-auto">
+                サイトをご覧いただきありがとうございます。
+                <br />
+                このページでは私、森口皓貴について
+                <br />
+                簡単に自己紹介させていただければと思います。
+                <br />
+                ページ構成として、プロフィール
+                <br />
+                現状のスキルレベル、学習履歴、
+                <br />
+                ポートフォリオの順に掲載しております。
+                <br />
+                <br />
+              </p>
               <hr></hr>
-              <br />
-            </p>
+            </div>
           ) : (
-            <p className="opacity-0 sm:max-w-md leading-relaxed text-gray-500 xl:text-base w-auto">
-              サイトをご覧いただきありがとうございます。
-              <br />
-              このページでは私、森口皓貴について
-              <br />
-              簡単に自己紹介させていただければと思います。
-              <br />
-              ページ構成として、プロフィール
-              <br />
-              現状のスキルレベル、学習履歴、
-              <br />
-              ポートフォリオの順に掲載しております。
-              <br />
+            <div>
+              <p className="opacity-0 sm:max-w-md leading-relaxed text-gray-500 xl:text-base w-auto">
+                サイトをご覧いただきありがとうございます。
+                <br />
+                このページでは私、森口皓貴について
+                <br />
+                簡単に自己紹介させていただければと思います。
+                <br />
+                ページ構成として、プロフィール
+                <br />
+                現状のスキルレベル、学習履歴、
+                <br />
+                ポートフォリオの順に掲載しております。
+                <br />
+                <br />
+              </p>
               <hr></hr>
-              <br />
-            </p>
+            </div>
           )}
         </div>
 

@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        customColor: "#000107",
+        customColor: "#020310",
+        "custom-blue": "#41C4FA",
+        "custom-green": "#46E3BE",
       },
       animation: {
         "tracking-in-expand":

@@ -163,6 +163,7 @@ export default function TopVideo() {
                 key={index}
                 strokeWidth={STROKE_WIDTH}
                 stroke="currentColor"
+                className={" text-indigo-400 opacity-50"}
               />
             ))}
             {gridSprings.map(({ y2 }, index) => (
@@ -174,6 +175,7 @@ export default function TopVideo() {
                 key={index}
                 strokeWidth={STROKE_WIDTH}
                 stroke="currentColor"
+                className={"text-indigo-400 opacity-50"}
               />
             ))}
           </g>
@@ -190,10 +192,11 @@ export default function TopVideo() {
                 }px)`,
                 scale,
               }}
+              className={"opacity-80"}
             />
           ))}
         </svg>
-        <div className="text-[50px] py-8 font-mono relative right-72">
+        <div className="text-indigo-400 opacity-80 text-[50px] py-8 font-mono relative right-64">
           {showKoki ? (
             <p className="animate-tracking-in-expand">KOKI</p>
           ) : (

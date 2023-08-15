@@ -13,7 +13,6 @@ const Slide = () => {
         <Swiper
           slidesPerView={1}
           freeMode={true}
-          freeModeSticky={false}
           centeredSlides={true}
           autoplay={{
             delay: 2000,

@@ -48,22 +48,22 @@ const SideMenu = () => {
           >
             <div className="z-50 mx-auto h-2/5 bg-gray-200 bg-opacity-80">
               <ul className="pt-20">
-                <li className="font-semibold text-gray-800 hover:text-gray-300 mb-1">
+                <li className="font-semibold text-gray-800 hover:text-indigo-400 mb-1">
                   <HashLink smooth to="/#Home">
                     Home
                   </HashLink>
                 </li>
-                <li className="font-semibold text-gray-800 hover:text-gray-300 mb-1">
+                <li className="font-semibold text-gray-800 hover:text-indigo-400 mb-1">
                   <HashLink smooth to="/#ProfileDetail">
                     Profile
                   </HashLink>
                 </li>
-                <li className="font-semibold text-gray-800 hover:text-gray-300 mb-1">
+                <li className="font-semibold text-gray-800 hover:text-indigo-400 mb-1">
                   <HashLink smooth to="/#Portfolio">
                     Portfolio
                   </HashLink>
                 </li>
-                <li className="font-semibold text-gray-800 hover:text-gray-300">
+                <li className="font-semibold text-gray-800 hover:text-indigo-400">
                   <HashLink smooth to="/#Contact">
                     Contact
                   </HashLink>
