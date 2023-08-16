@@ -5,7 +5,7 @@ import PortfolioData from "../Data/PortfolioData";
 const Portfolio = () => {
   return (
     <FadeIn>
-      <div id="Portfolio">
+      <div id="Portfolio" className="bg-gray-100">
         <div>
           <h1 className="text-black text-4xl font-bold sm:text-5xl md:text-6xl text-center mr-auto pb-4 mb-10 ">
             PORTFOLIOS

@@ -5,6 +5,7 @@ import ProfileDetail from "./ProfileDetail";
 import TopVideo from "./TopVideo";
 import Skill from "./Skill";
 import LearningBooksSlide from "./LearningBooksSlide";
+import MyFavorite from "./MyFavorite";
 import {
   SectionLineVideo,
   SectionLineWhiteToGray,
@@ -22,6 +23,8 @@ function TopPage() {
           <SectionLineWhiteToGray />
           <ProfileDetail />
           <SectionLineGrayToWhite />
+          <MyFavorite />
+          <SectionLineWhiteToGray />
           <Portfolio />
           <Skill />
           <LearningBooksSlide />

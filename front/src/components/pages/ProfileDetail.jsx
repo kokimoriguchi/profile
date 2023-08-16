@@ -62,7 +62,7 @@ const ProfileDetail = () => {
   }
 
   return (
-    <div className="bg-gray-100 font-mono">
+    <div className="bg-gray-100 pb-20 font-mono">
       <FadeIn onAnimationEnd={profileFadeInEnd}>
         <div className="sm:mx-16 flex flex-wrap justify-between">
           <div
@@ -207,9 +207,9 @@ const ProfileDetail = () => {
                         </li>
                       </ul>
                     ) : (
-                      <div className="hidden"></div>
+                      <div className="h-[400px]"></div>
                     )}
-                    <div className="relative top-[35px] w-full rounded-b-3xl shadow-2xl h-16 flex flex-row justify-center bg-custom-blue">
+                    <div className="relative top-[23px] w-full rounded-b-3xl shadow-2xl h-16 flex flex-row justify-center bg-custom-blue">
                       <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-0 h-0 border-b-[30px] border-custom-blue border-t-transparent border-r-[30px] border-l-[30px] border-r-transparent border-l-transparent"></div>
                       <div
                         target="_blank"
