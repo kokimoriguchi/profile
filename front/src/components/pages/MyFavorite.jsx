@@ -17,12 +17,12 @@ const MyFavorite = () => {
 
   const movementSkate = Math.round(scrollY * 0.1);
   const movementMalta = Math.round(scrollY * 0.05);
-  const movementLiam = Math.round(scrollY * 0.05);
+  const movementLiam = Math.round(scrollY * 0.08);
   const movementBasket = Math.round(scrollY * 0.05);
 
   const calculatedSkateRight = 0 + movementSkate;
   const calculatedMaltaRight = -70 + movementMalta;
-  const calculatedLiamLeft = -100 + movementLiam;
+  const calculatedLiamLeft = -180 + movementLiam;
   const calculatedBasketLeft = 100 + movementBasket;
 
   return (
@@ -110,9 +110,7 @@ const MyFavorite = () => {
           <br />
           趣味や好きなものを見てもらうことがイメージしやすいかと思いましたので
           <br />
-          ここでは自身の持つ写真を展開しています。
-          <br />
-          詳しく書いてしまうと長くなるので割愛します
+          自身の趣味の写真を展開しています。
           <br />
           ご興味ある方は下のボタンから覗いてみてください。
         </p>
@@ -120,7 +118,7 @@ const MyFavorite = () => {
           <div className="pt-2 px-3">
             <p className="border-b-2">view more</p>
           </div>
-          <div className="bg-black rounded-full w-10 h-10 text-white flex items-center justify-center">
+          <div className="bg-black rounded-full w-10 h-10 hover:text-black hover:bg-indigo-400 cursor-pointer text-white flex items-center justify-center transition duration-300">
             <AiOutlineArrowRight />
           </div>
         </div>
