@@ -50,10 +50,7 @@ const Skill = () => {
   };
 
   return (
-    <div id="skills" className="pb-20">
-      <div className="text-black text-4xl font-bold sm:text-5xl md:text-6xl text-center pt-4 pb-4">
-        <h2>GIT API DATA</h2>
-      </div>
+    <div id="skills" className="py-12">
       <FadeIn>
         <div className="sm:flex sm:flex-row flex-col sm:justify-center justify-center text-black">
           {state.requestState === requestStates.loading && (

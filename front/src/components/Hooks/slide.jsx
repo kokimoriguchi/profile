@@ -8,31 +8,29 @@ SwiperCore.use([Autoplay, Pagination]);
 
 const Slide = () => {
   return (
-    <div className="h-auto relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 shadow-lg md:py-10 xl:py-28">
-      <div className="h-2/3 w-full text-center">
+    <div className="overflow-hidden rounded-lg">
+      <div className="h-full w-full text-center">
         <Swiper
-          slidesPerView={1}
+          slidesPerView={4}
+          spaceBetween={0}
           freeMode={true}
           centeredSlides={true}
           autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
+            delay: 1500,
+            waitForTransition: false,
           }}
-          breakpoints={{
-            601: { slidesPerView: 2 },
-            1025: { slidesPerView: 3 },
-          }}
+          speed={1000}
           loop={true}
-          modules={[Pagination, Autoplay]}
+          modules={[Autoplay]}
           className="h-max"
         >
           {StudyBookData.map((slide, index) => (
-            <SwiperSlide key={index} className="px-1">
-              <div className="max-h-[450px] min-h-[450px] max-w-[350px]">
+            <SwiperSlide key={index} className="">
+              <div className="h-[450px] w-[370px] overflow-hidden rounded-lg pr-8">
                 <img
                   src={slide.bookImg}
                   alt={slide.bookAlt}
-                  className="border-2 border-black h-auto w-full object-cover rounded-lg shadow-lg hover:opacity-80 transition-all duration-500"
+                  className="border-2 border-black h-full w-full object-fill rounded-lg"
                 />
               </div>
             </SwiperSlide>

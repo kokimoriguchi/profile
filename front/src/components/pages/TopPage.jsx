@@ -3,7 +3,6 @@ import Home from "./Home";
 import Portfolio from "./Portfolio";
 import ProfileDetail from "./ProfileDetail";
 import TopVideo from "./TopVideo";
-import Skill from "./Skill";
 import LearningBooksSlide from "./LearningBooksSlide";
 import MyFavorite from "./MyFavorite";
 import {
@@ -26,7 +25,7 @@ function TopPage() {
           <MyFavorite />
           <SectionLineWhiteToGray />
           <Portfolio />
-          <Skill />
+          <SectionLineGrayToWhite />
           <LearningBooksSlide />
           <Contact />
         </div>
