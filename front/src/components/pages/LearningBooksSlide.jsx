@@ -1,5 +1,3 @@
-import Slide from "../Hooks/slide";
-import { FadeIn } from "../Hooks/FadeIn";
 import Skill from "../pages/Skill";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
@@ -16,8 +14,18 @@ const LearningBooksSlide = () => {
             ABOUT LEARNING
           </h1>
           <Skill />
+          <div className="flex flex-row">
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=kokimoriguchi&theme=apprentice&show_icons=true"
+              alt="koki GitHub stats"
+            />
+            <img
+              src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kokimoriguchi&theme=default"
+              alt="GitHub Stats Card"
+            />
+          </div>
           <p className="text-center pt-8 text-gray-500">
-            学習に使用した書籍、Gitのリポジトリに対する使用割合の多いものをAPIにて取得してグラフにしております。
+            Gitのリポジトリに対する使用割合の多いものをAPIにて取得してグラフにしております。
             <br />
             学習時間は、2022年1月頃から在職中に学習を始め、出勤日は最低1時間、休日は最低4時間の学習を行っておりました。
             <br />
@@ -42,9 +50,6 @@ const LearningBooksSlide = () => {
           </div>
         </div>
       </div>
-      <FadeIn>
-        <Slide />
-      </FadeIn>
     </div>
   );
 };

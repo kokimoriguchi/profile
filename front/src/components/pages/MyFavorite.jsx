@@ -1,8 +1,14 @@
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MyFavorite = () => {
   const [scrollY, setScrollY] = useState(0);
+  const navigate = useNavigate();
+
+  const handleOnClick = () => {
+    navigate("/FavoriteDetail");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -118,7 +124,10 @@ const MyFavorite = () => {
           <div className="pt-2 px-3">
             <p className="border-b-2">view more</p>
           </div>
-          <div className="bg-black rounded-full w-10 h-10 hover:text-black hover:bg-indigo-400 cursor-pointer text-white flex items-center justify-center transition duration-300">
+          <div
+            className="bg-black rounded-full w-10 h-10 hover:text-black hover:bg-indigo-400 cursor-pointer text-white flex items-center justify-center transition duration-300"
+            onClick={() => handleOnClick()}
+          >
             <AiOutlineArrowRight />
           </div>
         </div>
