@@ -196,7 +196,7 @@ export default function TopVideo() {
             />
           ))}
         </svg>
-        <div className="text-indigo-400 opacity-80 text-[50px] py-8 font-mono relative right-64">
+        <div className="text-indigo-400 opacity-80 text-[50px] py-8 font-mono relative md:right-64">
           {showKoki ? (
             <p className="animate-tracking-in-expand">KOKI</p>
           ) : (

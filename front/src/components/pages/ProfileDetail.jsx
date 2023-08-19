@@ -158,13 +158,18 @@ const ProfileDetail = () => {
 
             {animationProfileCard ? (
               <FadeIn>
-                <div className="h-[700px] py-6 px-4 ml-16 w-[700px] bg-indigo-200 shadow-2xl items-center rounded-xl">
+                <div className="lg:h-[750px] py-6 px-4 ml-32 lg:w-[650px] w-auto h-auto bg-indigo-400 shadow-2xl items-center rounded-xl">
                   <div className="mx-5 bg-white h-full rounded-3xl relative">
                     <div
-                      className="absolute top-0 left-0 w-full h-40 rounded-t-2xl bg-custom-green"
+                      className="absolute top-0 left-0 w-full h-1/2 border-8"
                       style={{
-                        clipPath:
-                          "polygon(0 0, 100% 0, 100% 100%, 100% 100%, 50% 50%, 0 100%, 0 100%)",
+                        borderRadius: "0% 100% 0% 100% / 0% 100% 0% 100% ",
+                      }}
+                    />
+                    <div
+                      className="absolute top-0 left-0 w-full h-1/2 border-8"
+                      style={{
+                        borderRadius: "100% 0% 100% 0% / 100% 0% 100% 0% ",
                       }}
                     />
                     {animationProfileCardImage ? (
@@ -209,8 +214,8 @@ const ProfileDetail = () => {
                     ) : (
                       <div className="h-[400px]"></div>
                     )}
-                    <div className="relative top-[23px] w-full rounded-b-3xl shadow-2xl h-16 flex flex-row justify-center bg-custom-blue">
-                      <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-0 h-0 border-b-[30px] border-custom-blue border-t-transparent border-r-[30px] border-l-[30px] border-r-transparent border-l-transparent"></div>
+                    <div className="relative top-[23px] w-full rounded-b-3xl shadow-2xl h-16 flex flex-row justify-center bg-gray-700">
+                      <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-0 h-0 border-b-[30px] border-gray-700 border-t-transparent border-r-[30px] border-l-[30px] border-r-transparent border-l-transparent"></div>
                       <div
                         target="_blank"
                         className="text-slate-200 z-10 pt-3 pr-10 transition duration-100 hover:text-indigo-500 active:text-gray-600 cursor-pointer"

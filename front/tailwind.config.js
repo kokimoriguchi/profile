@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         customColor: "#020310",
-        "custom-blue": "#41C4FA",
+        "custom-bg": "#E3D7D7",
         "custom-green": "#46E3BE",
       },
       animation: {
