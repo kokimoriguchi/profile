@@ -18,14 +18,42 @@ const FavoriteDetail = () => {
       <section className="">
         <div className="relative animate-tracking-in-expand transition duration-700">
           <div className="text-[155px] absolute top-0 left-1/2 transform -translate-x-1/2 text-center z-10 font-mono font-bold">
-            FAVORITE
-            <br />
-            HOBBY
+            <span
+              className="absolute animate-rotate top-0 left-48 h-[400px] w-[400px] border-4 border-gray-600 inline-block"
+              style={{
+                borderRadius: "60% 40% 41% 59% / 43% 50% 50% 57% ",
+              }}
+            />
+            <span
+              className="absolute animate-rotate-reverse top-0 left-52 h-[400px] w-[400px] border-4 border-gray-600 inline-block"
+              style={{
+                borderRadius: "47% 53% 43% 57% / 61% 47% 53% 39% ",
+              }}
+            />
+            <span
+              className="absolute animate-rotate-reverse top-0 left-40 h-[400px] w-[400px] border-2 border-gray-600 inline-block"
+              style={{
+                borderRadius: "40% 60% 38% 62% / 66% 38% 62% 34% ",
+              }}
+            />
+            <span
+              className="absolute animate-rotate top-0 left-56 h-[400px] w-[400px] border-2 border-gray-600 inline-block"
+              style={{
+                borderRadius: "55% 45% 60% 40% / 52% 50% 50% 48% ",
+              }}
+            />
+            <span
+              className="absolute animate-rotate top-0 left-52 h-[400px] w-[400px] border-2 border-gray-600 inline-block"
+              style={{
+                borderRadius: "52% 48% 54% 46% / 47% 58% 42% 53% ",
+              }}
+            />
+            <h1>FAVORITE</h1>
+            <h1>HOBBY</h1>
           </div>
           <div className="text-[150px] absolute top-0 left-1/2 transform -translate-x-1/2 text-indigo-400 text-center z-10 font-mono font-bold">
-            FAVORITE
-            <br />
-            HOBBY
+            <h1>FAVORITE</h1>
+            <h1>HOBBY</h1>
           </div>
         </div>
         <div className="flex justify-between">
@@ -161,25 +189,19 @@ const FavoriteDetail = () => {
             </div>
             <div className="text-center opacity-60 text-lg">
               <p>
-                海外に興味を持ったきっかけは、
+                海外への興味は、純粋な好奇心からです。
                 <br />
-                ただの好奇心で海外に行ってみたいと思ったからです。
+                ただ、思い立って行ってみることにしました。
                 <br />
-                おもいたったが吉日ということで、すぐに行く資金を貯めるために、
+                資金を集めるために、鳶職という高所での厳しい仕事を始め、毎日熱心に働きました。
                 <br />
-                鳶職という高所作業をする仕事を始めました。週6日、朝から晩まで働き、
+                その結果、40万円を貯め、英語の知識もないままマルタ島への語学留学への道を選びました。
                 <br />
-                40万円の資金を貯めマルタ島という島に語学留学という形で行きました。
+                言語の障壁や初めてのルームシェアの経験は確かに困難でした。
                 <br />
-                英語も話せず、海外にも行ったことがない私は、
+                しかし、マルタでの出会いは私の視野を広げ、新しい夢を抱くきっかけとなりました。
                 <br />
-                ただ好奇心を胸に行動しました。
-                <br />
-                全く話せない言語の壁を痛感し慣れない土地でのルームシェアにも苦労しました。
-                <br />
-                しかし、そこで出会った人たちとの出会いは私の夢を大きくしてくれました。
-                <br />
-                いつかここで出会った人たちと一緒に仕事をしたいと思っています。
+                この素晴らしい経験を通して、いつかマルタで知り合った友人たちと共に仕事をすることを夢見ています。
               </p>
             </div>
           </div>
@@ -215,15 +237,16 @@ const FavoriteDetail = () => {
             <p>
               私は音楽が大好きで、特に洋楽が好きです。
               <br />
-              その中でも、特に好きなアーティストは、Oasisです。
+              中でもOasisは私のお気に入りのアーティストです。
               <br />
-              高校時代BECKという映画の中でOasisの音楽が流れていたことがきっかけでした。
+              高校時代、映画「BECK」でOasisの曲を聴いたのがきっかけで、
               <br />
-              その後、Oasisの音楽を聴き始め、その音楽に魅了されました。
+              その瞬間から彼らのメロディに引き込まれました。
               <br />
-              辛い時、悲しい時、嬉しい時、楽しい時、どんな時でもOasisの音楽を聴くと元気が出ます。
+              どんな気分の時も、Oasisの音楽は私に力を与えてくれます。
               <br />
-              おすすめはTheMasterplanとLittleByLittleいう曲です!
+              特に「The Masterplan」と「Little By
+              Little」は、心からおすすめの曲です!
             </p>
           </div>
         </div>

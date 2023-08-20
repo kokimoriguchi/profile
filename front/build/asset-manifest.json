@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.2847ba46.css",
-    "main.js": "/static/js/main.f243d2c1.js",
-    "static/media/jeremy-bishop-G9i_plbfDgk-unsplash.jpg": "/static/media/jeremy-bishop-G9i_plbfDgk-unsplash.a38aaf98005f1677e18f.jpg",
+    "main.css": "/static/css/main.8d7707f6.css",
+    "main.js": "/static/js/main.18da6c96.js",
     "index.html": "/index.html",
-    "main.2847ba46.css.map": "/static/css/main.2847ba46.css.map",
-    "main.f243d2c1.js.map": "/static/js/main.f243d2c1.js.map"
+    "main.8d7707f6.css.map": "/static/css/main.8d7707f6.css.map",
+    "main.18da6c96.js.map": "/static/js/main.18da6c96.js.map"
   },
   "entrypoints": [
-    "static/css/main.2847ba46.css",
-    "static/js/main.f243d2c1.js"
+    "static/css/main.8d7707f6.css",
+    "static/js/main.18da6c96.js"
   ]
 }

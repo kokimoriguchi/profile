@@ -127,7 +127,7 @@ const MyFavorite = () => {
         </p>
         <div className="flex flex-row pt-8 justify-center">
           <div className="pt-2 px-3">
-            <p className="border-b-2">view more</p>
+            <p className="border-b-2 border-indigo-400">view more</p>
           </div>
           <div
             className="bg-black rounded-full w-10 h-10 hover:text-black hover:bg-indigo-400 cursor-pointer text-white flex items-center justify-center transition duration-300"

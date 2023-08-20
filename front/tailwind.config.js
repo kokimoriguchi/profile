@@ -14,8 +14,18 @@ module.exports = {
         "bg-pan-left": "bg-pan-left 10s ease infinite",
         "flip-in-hor-bottom":
           "flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
+        rotate: "rotate 5s linear infinite",
+        "rotate-reverse": "rotate-reverse 5s linear infinite",
       },
       keyframes: {
+        rotate: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "rotate-reverse": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-360deg)" },
+        },
         "tracking-in-expand": {
           "0%": {
             "letter-spacing": "-.5em",

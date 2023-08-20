@@ -1,12 +1,5 @@
 const PortfolioData = [
   {
-    imgSrc: "/images/ShiftHub.png",
-    altText: "シフト管理アプリ「ShiftHub」",
-    detailContent:
-      "ReactとRailsで実装しました。シフト管理アプリです。管理者とユーザーでログインできます。管理者はユーザーのシフトを作成できます。ユーザーはシフトを確認できます。",
-    gitUrl: process.env.REACT_APP_SHIFT_URL,
-  },
-  {
     imgSrc: "/images/RealWorld.png",
     altText: "RealWorldクローンアプリ",
     detailContent:
@@ -14,10 +7,17 @@ const PortfolioData = [
     gitUrl: process.env.REACT_APP_REAL_WORLD_URL,
   },
   {
-    imgSrc: "/images/ProfileSite.png",
+    imgSrc: "/images/ShiftHub.png",
+    altText: "シフト管理アプリ「ShiftHub」",
+    detailContent:
+      "ReactとRailsで実装したシフト管理アプリです。前職での課題を解決するために作成したものになります。初めてユーザーに使用してもらうために開発したアプリになります。ご興味ありましたら下記のボタンからリポジトリ確認していただけます。",
+    gitUrl: process.env.REACT_APP_SHIFT_URL,
+  },
+  {
+    imgSrc: "/images/profileSite.png",
     altText: "PROFILE SITE",
     detailContent:
-      "Reactとtailwindで実装しました。自己紹介、趣味、ポートフォリオ、学習歴、お問い合わせフォームの項目があります。",
+      "Reactとtailwindで実装しました。自己紹介、趣味、ポートフォリオ、学習履歴があります。現在ご覧いただいているサイトになります。",
     gitUrl: process.env.REACT_APP_PROFILE_URL,
   },
   {
@@ -31,7 +31,7 @@ const PortfolioData = [
     imgSrc: "/images/StockPractice.png",
     altText: "商品管理サイト",
     detailContent:
-      "RailsとMySQLで商品管理システムを作成しました。基本的なCRUD機能とお気に入り登録、カート追加機能等を非同期で実装。デザインはBootstrapのみの実装。",
+      "RailsとMySQLで商品管理システムを作成しました。ログイン機能・基本的なCRUD機能とお気に入り登録、カート追加機能等を非同期で実装。デザインはBootstrapです。学習初期だったこともあり最も苦労したアプリになります。",
     gitUrl: process.env.REACT_APP_STOCK_URL,
   },
   {

@@ -196,10 +196,10 @@ const ProfileDetail = () => {
                           CAREER
                         </li>
                         <li className="px-10 pb-2">
-                          2013/04〜:桜宮高校入学バスケ部副キャプテンとして最高戦績大阪3位
+                          2013/04〜:桜宮高校バスケ部副キャプテン。最高戦績大阪3位
                         </li>
                         <li className="px-10 pb-2">
-                          2016/04〜:龍谷大学経済学部国際経済学科入学沖縄の基地問題を研究
+                          2016/04〜:龍谷大学経済学部国際経済学科。基地問題を研究
                         </li>
                         <li className="px-10 pb-2">
                           2020/01〜:マルタ島短期留学
@@ -214,7 +214,7 @@ const ProfileDetail = () => {
                     ) : (
                       <div className="h-[400px]"></div>
                     )}
-                    <div className="relative top-[23px] w-full rounded-b-3xl shadow-2xl h-16 flex flex-row justify-center bg-gray-700">
+                    <div className="relative top-[73px] w-full rounded-b-3xl shadow-2xl h-16 flex flex-row justify-center bg-gray-700">
                       <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-0 h-0 border-b-[30px] border-gray-700 border-t-transparent border-r-[30px] border-l-[30px] border-r-transparent border-l-transparent"></div>
                       <div
                         target="_blank"

@@ -20,7 +20,7 @@ const LearningBooksSlide = () => {
               alt="koki GitHub stats"
             />
             <img
-              src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kokimoriguchi&theme=default"
+              src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kokimoriguchi&theme=default"
               alt="GitHub Stats Card"
             />
           </div>
@@ -41,7 +41,7 @@ const LearningBooksSlide = () => {
               className="flex items-center"
             >
               <div className="pt-2 px-3">
-                <p className="border-b-2">view report</p>
+                <p className="border-b-2 border-indigo-400">view report</p>
               </div>
               <div className="bg-black rounded-full w-10 h-10 text-white flex items-center justify-center hover:bg-indigo-400 hover:text-black transition duration-300">
                 <AiOutlineArrowRight />
