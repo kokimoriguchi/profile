@@ -41,7 +41,7 @@ const Slide = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className=" bg-indigo-200 ">
+                    <td className=" bg-indigo-200 rounded-t-xl">
                       <img
                         src={portfolioData.imgSrc}
                         alt={portfolioData.altText}

@@ -62,7 +62,7 @@ const ProfileDetail = () => {
   }
 
   return (
-    <div className="bg-gray-100 pb-20 font-mono">
+    <div className="bg-gray-200 h-[1000px] py-32 font-mono">
       <FadeIn onAnimationEnd={profileFadeInEnd}>
         <div className="sm:mx-16 flex flex-wrap justify-between">
           <div
@@ -195,19 +195,19 @@ const ProfileDetail = () => {
                         <li className="m-auto text-indigo-400 text-center font-semibold text-2xl py-5">
                           CAREER
                         </li>
-                        <li className="pl-10 pb-2">
+                        <li className="px-10 pb-2">
                           2013/04〜:桜宮高校入学バスケ部副キャプテンとして最高戦績大阪3位
                         </li>
-                        <li className="pl-10 pb-2">
+                        <li className="px-10 pb-2">
                           2016/04〜:龍谷大学経済学部国際経済学科入学沖縄の基地問題を研究
                         </li>
-                        <li className="pl-10 pb-2">
+                        <li className="px-10 pb-2">
                           2020/01〜:マルタ島短期留学
                         </li>
-                        <li className="pl-10 pb-2">
+                        <li className="px-10 pb-2">
                           2020/04〜:ゼビオ株式会社入社チーフマネージャーとして勤務
                         </li>
-                        <li className="pl-10 pb-2">
+                        <li className="px-10 pb-2">
                           2023/04〜:apprentice参加プログラミング学習に集中
                         </li>
                       </ul>
