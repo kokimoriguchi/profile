@@ -2,19 +2,19 @@ import Skill from "../pages/Skill";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 const LearningBooksSlide = () => {
-  const DailyReportUrl = process.env.REACT_APP_DAILY_REPORT_URL;
+  const DailyReportUrl = process.env.REACT_APP_REPORT_URL;
   return (
     <div id="LearningBooksSlide" className="mb-20 sm:pt-10 mt-40">
       <div className="animate-tracking-in-expand">
         <div className="flex flex-col justify-center items-center relative">
-          <h1 className="text-indigo-400 font-bold text-[70px] opacity-50">
+          <h1 className="text-indigo-400 font-bold sm:text-6xl text-4xl opacity-50">
             ABOUT LEARNING
           </h1>
-          <h1 className="text-black-800 absolute top-[4px] left-[418px] text-[70px] font-bold ">
+          <h1 className="text-black absolute top-[4px] sm:left-[460px] sm:text-6xl text-4xl font-bold ">
             ABOUT LEARNING
           </h1>
           <Skill />
-          <div className="flex flex-row">
+          <div className="flex sm:flex-row flex-col">
             <img
               src="https://github-readme-stats.vercel.app/api?username=kokimoriguchi&theme=apprentice&show_icons=true"
               alt="koki GitHub stats"

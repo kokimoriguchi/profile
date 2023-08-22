@@ -78,15 +78,22 @@ const COORDS = [
   [290, 30],
   [290, 40],
   [290, 50],
-  [290, 70], //ここまでで!
+  [290, 60],
+  [290, 70],
+  [300, 30],
+  [300, 50],
+  [300, 70],
+  [310, 30],
+  [310, 50],
+  [310, 70], //ここまででE
 ];
 
 const STROKE_WIDTH = 0.5;
 
 const OFFSET = STROKE_WIDTH / 2;
 
-const MAX_WIDTH = 310 + OFFSET * 2;
-const MAX_HEIGHT = 100 + OFFSET * 2;
+const MAX_WIDTH = 330 + OFFSET * 2;
+const MAX_HEIGHT = 110 + OFFSET * 2;
 
 export default function TopVideo() {
   const [showKoki, setShowKoki] = useState(false);
@@ -131,10 +138,10 @@ export default function TopVideo() {
     to: {
       scale: 1,
     },
-    delay: i * 200,
+    delay: i * 150,
     config: {
       mass: 2,
-      tension: 220,
+      tension: 200,
     },
   }));
 
@@ -151,7 +158,7 @@ export default function TopVideo() {
         <source src="/images/19415_640x360.mp4" type="video/mp4" />
         お使いのブラウザは動画をサポートしていません。
       </video>
-      <div className="max-w-800  pt-48 m-auto w-1/2">
+      <div className="max-w-800  pt-48 m-auto w-auto sm:w-1/2">
         <svg viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
           <g>
             {gridSprings.map(({ x2 }, index) => (
@@ -196,7 +203,7 @@ export default function TopVideo() {
             />
           ))}
         </svg>
-        <div className="text-indigo-400 opacity-80 text-[50px] py-8 font-mono relative md:right-64">
+        <div className="text-indigo-400 opacity-80 text-[50px] py-8 font-mono relative md:right-64 ">
           {showKoki ? (
             <p className="animate-tracking-in-expand">KOKI</p>
           ) : (

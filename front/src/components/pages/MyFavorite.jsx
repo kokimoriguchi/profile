@@ -31,19 +31,19 @@ const MyFavorite = () => {
   const movementLiam = Math.round(scrollY * 0.08);
   const movementBasket = Math.round(scrollY * 0.05);
 
-  const calculatedSkateRight = 0 + movementSkate;
+  const calculatedSkateRight = -70 + movementSkate;
   const calculatedMaltaRight = -70 + movementMalta;
   const calculatedLiamLeft = -180 + movementLiam;
   const calculatedBasketLeft = 100 + movementBasket;
 
   return (
     <div className="py-40 relative font-mono">
-      <ul className="relative h-[900px]">
-        <li className="w-[400px] h-[500px] m-auto absolute top-0 left-1/2 transform -translate-x-1/2 opacity-90">
+      <ul className="relative sm:h-[900px] h-[200px]">
+        <li className="sm:w-[400px] sm:h-[500px] m-auto sm:absolute relative top-0 left-1/2 transform -translate-x-1/2 opacity-90">
           <img src="/images/bike.jpeg" alt="MyBike" className="object-cover" />
         </li>
         <li
-          className="absolute opacity-90"
+          className="absolute opacity-90 sm:block hidden"
           style={{
             width: "200px",
             height: "200px",
@@ -58,7 +58,7 @@ const MyFavorite = () => {
           />
         </li>
         <li
-          className="absolute opacity-90"
+          className="absolute opacity-90 sm:block hidden"
           style={{
             width: "150px",
             height: "150px",
@@ -73,7 +73,7 @@ const MyFavorite = () => {
           />
         </li>
         <li
-          className="absolute opacity-90"
+          className="absolute opacity-90 sm:block hidden"
           style={{
             width: "350px",
             height: "222px",
@@ -88,7 +88,7 @@ const MyFavorite = () => {
           />
         </li>
         <li
-          className="absolute opacity-90"
+          className="absolute opacity-90 sm:block hidden"
           style={{
             width: "350px",
             height: "450px",
@@ -103,20 +103,20 @@ const MyFavorite = () => {
           />
         </li>
       </ul>
-      <div className="text-center absolute z-10 w-[500px] h-[200px] top-[750px] left-1/2 transform -translate-x-1/2">
+      <div className="text-center absolute z-10 sm:w-[500px] sm:h-[200px] w-auto h-auto sm:top-[750px] left-1/2 transform -translate-x-1/2">
         <div className="relative font-semibold">
           <h1 className="text-[70px] leading-none z-10 text-black">
             FAVORITE
             <br />
             HOBBY
           </h1>
-          <h1 className="text-[70px] absolute top-[2px] -z-10 right-[75px] leading-none text-indigo-400 opacity-50">
+          <h1 className="text-[70px] absolute top-[2px] -z-10 sm:right-[75px] right-[10px] leading-none text-indigo-400 opacity-50">
             FAVORITE
             <br />
             HOBBY
           </h1>
         </div>
-        <p className="pt-2 text-gray-500">
+        <p className="pt-2 sm:text-gray-500 text-slate-200 sm:text-base text-sm pb-10 sm:pb-0">
           私という人物を知ってもらうには、
           <br />
           趣味や好きなものを見てもらうことがイメージしやすいかと思いましたので

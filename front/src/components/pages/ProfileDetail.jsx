@@ -62,17 +62,17 @@ const ProfileDetail = () => {
   }
 
   return (
-    <div className="bg-gray-200 h-[1000px] py-32 font-mono">
+    <div className="bg-gray-200 sm:h-[1000px] h-[1500px] py-32 font-mono">
       <FadeIn onAnimationEnd={profileFadeInEnd}>
-        <div className="sm:mx-16 flex flex-wrap justify-between">
+        <div className="sm:mx-16">
           <div
-            className="pr-20 h-auto flex flex-col lg:flex-row rounded-lg"
+            className="sm:pr-20 pr-0 h-auto flex flex-col lg:flex-row rounded-lg"
             id="ProfileDetail"
           >
             <div className="mb-6 pr-16 mt-10 font-mono flex w-auto flex-col justify-center sm:mb-12 lg:mb-0 lg:w-2/5 lg:pt-48">
               {animationTitle ? (
-                <div className="animate-tracking-in-expand">
-                  <h1 className="text-indigo-400 text-black-800 mb-4 text-4xl font-bold sm:text-5xl md:text-6xl opacity-50">
+                <div className="animate-tracking-in-expand pl-8 sm:pl-0">
+                  <h1 className="text-indigo-400 text-black-800 mb-4 font-bold text-6xl opacity-50">
                     PROFILE
                   </h1>
                   <h1 className="text-black-800 relative -top-[79px] right-2 text-6xl font-bold ">
@@ -83,7 +83,7 @@ const ProfileDetail = () => {
                 <h1 className="text-4xl mb-4 opacity-0 font-bold">PROFILE</h1>
               )}
               {animationDetail ? (
-                <p className="animate-tracking-in-expand font-semibold text-indigo-400 md:mb-6 md:text-lg xl:text-2xl">
+                <p className="pl-8 sm:pl-0 animate-tracking-in-expand font-semibold text-indigo-400 mb-6 md:text-lg xl:text-2xl">
                   ABOUT
                 </p>
               ) : (
@@ -92,60 +92,66 @@ const ProfileDetail = () => {
                 </p>
               )}
               {animationIcon ? (
-                <div className="md:mb-8 md:text-lg max-w-screen-md flex flex-row text-gray-600">
-                  <div className="animate-tracking-in-expand order-1">
-                    <p>NAME:</p>
-                    <p>BIRTH:</p>
-                    <p>AGE:</p>
-                    <p>FROM:</p>
-                    <p>EDITOR:</p>
-                    <p>OS:</p>
-                  </div>
-                  <div className="animate-tracking-in-expand order-2">
-                    <p>森口皓貴</p>
-                    <p>1997/06/07</p>
-                    <p>26歳</p>
-                    <p>Osaka</p>
-                    <p>VSCode</p>
-                    <p>M1MacOS</p>
-                  </div>
-                  <div className="pl-8 flex flex-row animate-tracking-in-expand order-3">
-                    <div className="flex flex-col">
-                      <p>LANGUAGE:</p>
-                      <p>FRAMEWORK:</p>
-                      <p>DESIGN:</p>
-                      <p>DATABASE:</p>
-                      <p>INFRA:</p>
-                      <p>OTHERS:</p>
+                <div className="md:mb-8 md:text-lg max-w-screen-md text-gray-600">
+                  <div className="flex sm:flex-row flex-col">
+                    <div className="flex flex-row pl-8 sm:pl-0 pb-5 sm:pb-5">
+                      <div className="animate-tracking-in-expand order-1">
+                        <p>NAME:</p>
+                        <p>BIRTH:</p>
+                        <p>AGE:</p>
+                        <p>FROM:</p>
+                        <p>EDITOR:</p>
+                        <p>OS:</p>
+                      </div>
+                      <div className="animate-tracking-in-expand order-2">
+                        <p>森口皓貴</p>
+                        <p>1997/06/07</p>
+                        <p>26歳</p>
+                        <p>Osaka</p>
+                        <p>VSCode</p>
+                        <p>M1MacOS</p>
+                      </div>
                     </div>
-                    <div className="text-2xl animate-tracking-in-expand order-4">
-                      <div className="flex flex-row mb-1">
-                        <SiJavascript className="text-yellow-500 mr-2" />
-                        <SiRuby className="text-red-700 mr-2" />
-                        <SiHtml5 className=" text-orange-500 mr-2" />
-                        <SiCss3 className="text-blue-500 mr-2" />
-                      </div>
-                      <div className="flex flex-row mb-1">
-                        <SiReact className="text-blue-300 mr-2" />
-                        <SiRubyonrails className="text-red-700 mr-2" />
-                      </div>
-                      <div className="flex flex-row mb-1">
-                        <SiTailwindcss className="text-sky-300 mr-2" />
-                        <SiSass className="text-pink-600 mr-2" />
-                        <SiFigma className="mr-2" />
-                      </div>
-                      <div className="flex flex-row mb-1">
-                        <SiMysql className="text-blue-500" />
-                      </div>
-                      <div className="flex flex-row mb-1">
-                        <SiAmazonaws className="mr-2" />
-                        <SiDocker className="text-blue-400" />
-                      </div>
-                      <div className="flex flex-row mb-1">
-                        <SiGithub className="text-black mr-2" />
-                        <SiGit className="text-orange-700 mr-2" />
-                        <SiNginx className="text-green-700 mr-2" />
-                        <SiRubocop className="text-black" />
+                    <div>
+                      <div className="pl-8 flex flex-row animate-tracking-in-expand order-3">
+                        <div className="flex flex-col">
+                          <p>LANGUAGE:</p>
+                          <p>FRAMEWORK:</p>
+                          <p>DESIGN:</p>
+                          <p>DATABASE:</p>
+                          <p>INFRA:</p>
+                          <p>OTHERS:</p>
+                        </div>
+                        <div className="text-2xl animate-tracking-in-expand order-4">
+                          <div className="flex flex-row mb-1">
+                            <SiJavascript className="text-yellow-500 mr-2" />
+                            <SiRuby className="text-red-700 mr-2" />
+                            <SiHtml5 className=" text-orange-500 mr-2" />
+                            <SiCss3 className="text-blue-500 mr-2" />
+                          </div>
+                          <div className="flex flex-row mb-1">
+                            <SiReact className="text-blue-300 mr-2" />
+                            <SiRubyonrails className="text-red-700 mr-2" />
+                          </div>
+                          <div className="flex flex-row mb-1">
+                            <SiTailwindcss className="text-sky-300 mr-2" />
+                            <SiSass className="text-pink-600 mr-2" />
+                            <SiFigma className="mr-2" />
+                          </div>
+                          <div className="flex flex-row mb-1">
+                            <SiMysql className="text-blue-500" />
+                          </div>
+                          <div className="flex flex-row mb-1">
+                            <SiAmazonaws className="mr-2" />
+                            <SiDocker className="text-blue-400" />
+                          </div>
+                          <div className="flex flex-row mb-1">
+                            <SiGithub className="text-black mr-2" />
+                            <SiGit className="text-orange-700 mr-2" />
+                            <SiNginx className="text-green-700 mr-2" />
+                            <SiRubocop className="text-black" />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -158,16 +164,16 @@ const ProfileDetail = () => {
 
             {animationProfileCard ? (
               <FadeIn>
-                <div className="lg:h-[750px] py-6 px-4 ml-32 lg:w-[650px] w-auto h-auto bg-indigo-400 shadow-2xl items-center rounded-xl">
+                <div className="lg:h-[750px] py-6 px-4 sm:ml-32 lg:w-[650px] w-full h-auto bg-indigo-400 shadow-2xl items-center rounded-xl">
                   <div className="mx-5 bg-white h-full rounded-3xl relative">
                     <div
-                      className="absolute top-0 left-0 w-full h-1/2 border-8"
+                      className="absolute top-10 left-0 w-full h-1/2 border-8"
                       style={{
                         borderRadius: "0% 100% 0% 100% / 0% 100% 0% 100% ",
                       }}
                     />
                     <div
-                      className="absolute top-0 left-0 w-full h-1/2 border-8"
+                      className="absolute top-10 left-0 w-full h-1/2 border-8"
                       style={{
                         borderRadius: "100% 0% 100% 0% / 100% 0% 100% 0% ",
                       }}
@@ -214,7 +220,7 @@ const ProfileDetail = () => {
                     ) : (
                       <div className="h-[400px]"></div>
                     )}
-                    <div className="relative top-[73px] w-full rounded-b-3xl shadow-2xl h-16 flex flex-row justify-center bg-gray-700">
+                    <div className="relative sm:top-[73px] top-[20px] w-full rounded-b-3xl shadow-2xl h-16 flex flex-row justify-center bg-gray-700">
                       <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-0 h-0 border-b-[30px] border-gray-700 border-t-transparent border-r-[30px] border-l-[30px] border-r-transparent border-l-transparent"></div>
                       <div
                         target="_blank"

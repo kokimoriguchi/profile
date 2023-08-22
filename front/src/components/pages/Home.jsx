@@ -24,13 +24,13 @@ const Home = () => {
         id="Home"
         className="sm:mx-16 mx-0 mb-8 flex flex-wrap justify-between"
       >
-        <div className="mb-6 font-mono flex w-auto flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pt-36 lg:pb-12">
+        <div className="sm:pl-0 pl-5 mb-6 font-mono flex w-auto flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pt-36 lg:pb-12">
           {animationTitle ? (
             <div className="animate-tracking-in-expand h-[100px]">
-              <h1 className="text-indigo-400 text-black-800 mb-4 text-4xl font-bold sm:text-5xl md:mb-8 md:text-[70px] opacity-50">
+              <h1 className="text-indigo-400 text-black-800 mb-4 font-bold md:mb-8 text-6xl opacity-50">
                 WELCOME
               </h1>
-              <h1 className="text-black-800 relative -top-[120px] right-2 text-[70px] font-bold ">
+              <h1 className="text-black-800 relative sm:-top-[90px] -top-[79px] right-2 text-6xl font-bold ">
                 WELCOME
               </h1>
             </div>
